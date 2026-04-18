@@ -3,7 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar Inovasi - Solusi Aplikasi Apps Script & Sheets</title>
+    
+    <title>Katalog Aplikasi Belajar Inovasi | Sistem Apps Script & Sheets</title>
+    <meta name="description" content="Toko resmi Belajar Inovasi. Menyediakan aplikasi pendidikan, sistem ujian CBT, pembayaran sekolah, LMS, dan administrasi berbasis Google Sheets & Apps Script.">
+    <meta name="keywords" content="Aplikasi CBT, Apps Script, Google Sheets, Belajar Inovasi, Pembayaran Sekolah, LMS, Surat Menyurat, Buku Tabungan, Dashboard Keuangan">
+    <meta name="author" content="Belajar Inovasi">
+    <link rel="canonical" href="https://suwanto-belajar-inovasi.github.io/beli_aplikasi">
+
+    <link rel="icon" type="image/png" href="https://drive.google.com/uc?export=view&id=1WTjBl1ks0LeoUSRm69woUj1kASRCt_Tv">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://suwanto-belajar-inovasi.github.io/beli_aplikasi">
+    <meta property="og:title" content="Katalog Aplikasi Belajar Inovasi | Berbasis Apps Script">
+    <meta property="og:description" content="Tingkatkan efisiensi sekolah dan bisnis Anda dengan aplikasi terintegrasi Google Sheets. Cek katalog kami sekarang!">
+    <meta property="og:image" content="https://drive.google.com/uc?export=view&id=1WTjBl1ks0LeoUSRm69woUj1kASRCt_Tv"> 
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,87 +31,178 @@
 
     <nav class="bg-white sticky top-0 z-40 shadow-sm border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold"><i class="fa-solid fa-lightbulb"></i></div>
+            <div class="flex items-center space-x-3">
+                <img src="https://drive.google.com/uc?export=view&id=1WTjBl1ks0LeoUSRm69woUj1kASRCt_Tv" alt="Logo Belajar Inovasi" class="w-10 h-10 object-contain rounded-lg shadow-sm border border-gray-100">
                 <span class="text-2xl font-bold tracking-tight text-gray-950">Belajar <span class="text-blue-600">Inovasi</span></span>
             </div>
-            <div class="flex items-center space-x-6 text-sm font-medium text-gray-700">
-                <a href="https://youtube.com/@suwanto_pakwanto?si=jSQB2fzfunUz3vEo" target="_blank" class="hover:text-red-600 text-red-500 transition"><i class="fa-brands fa-youtube text-lg"></i> YouTube</a>
-                <a href="#catalog" class="hover:text-blue-600">Katalog Aplikasi</a>
-                <button onclick="toggleCart()" class="relative bg-gray-900 text-white px-4 py-2 rounded-full text-xs hover:bg-gray-800 transition flex items-center gap-2">
-                    <i class="fa-solid fa-cart-shopping"></i> Keranjang
-                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center">0</span>
+            <div class="flex items-center space-x-4 md:space-x-6 text-sm font-medium text-gray-700">
+                <a href="https://youtube.com/@suwanto_pakwanto?si=jSQB2fzfunUz3vEo" target="_blank" class="hidden md:flex items-center gap-1 hover:text-red-600 text-red-500 transition"><i class="fa-brands fa-youtube text-lg"></i> YouTube</a>
+                <a href="#catalog" class="hidden md:block hover:text-blue-600">Katalog</a>
+                <button onclick="toggleCart()" class="relative bg-gray-900 text-white px-5 py-2.5 rounded-full text-xs hover:bg-gray-800 transition flex items-center gap-2 shadow-md">
+                    <i class="fa-solid fa-cart-shopping"></i> <span class="hidden md:inline font-semibold">Keranjang</span>
+                    <span id="cart-count" class="absolute -top-2 -right-2 bg-red-500 text-white text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold border-2 border-white">0</span>
                 </button>
             </div>
         </div>
     </nav>
 
-    <header class="bg-white py-20 px-6 text-center">
-        <div class="max-w-3xl mx-auto">
-            <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium mb-6">
+    <header class="bg-white py-20 px-6 text-center border-b border-gray-100 relative overflow-hidden">
+        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-full h-full max-w-4xl bg-blue-50 opacity-50 rounded-full blur-3xl -z-10"></div>
+        
+        <div class="max-w-3xl mx-auto relative z-10">
+            <div class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-blue-200">
                 <span>⚡ Berbasis Google Sheets & Apps Script</span>
             </div>
-            <h1 class="text-5xl font-extrabold tracking-tighter text-gray-950 mb-6">Automasi Pendidikan & Bisnis Tanpa Server Rumit.</h1>
-            <p class="text-xl text-gray-600 mb-10">Aplikasi ringan, responsif, dan terintegrasi langsung dengan database Google Sheets Anda. Mudah dikelola, tanpa biaya hosting bulanan.</p>
-            <a href="#catalog" class="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-semibold shadow-lg hover:bg-blue-700 transition text-lg">Mulai Belanja</a>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-gray-950 mb-6 leading-tight">Automasi Administrasi & Pendidikan Tanpa Server Rumit.</h1>
+            <p class="text-lg md:text-xl text-gray-600 mb-10 leading-relaxed">Kelola CBT, LMS, Keuangan, hingga Surat Menyurat langsung dari Google Sheets Anda. Ringan, responsif, tanpa biaya hosting bulanan.</p>
+            <a href="#catalog" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-blue-200 hover:bg-blue-700 hover:shadow-xl transition-all transform hover:-translate-y-1 text-lg inline-block">Jelajahi Katalog Aplikasi</a>
         </div>
     </header>
 
-    <main class="py-16 px-6 bg-gray-50">
+    <main class="py-20 px-6 bg-gray-50 min-h-screen">
         <div class="max-w-7xl mx-auto">
             
-            <div id="catalog" class="mb-12 text-center">
-                <h2 class="text-3xl font-bold text-gray-950 mb-4">Katalog Aplikasi</h2>
+            <div id="catalog" class="mb-14 text-center">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-950 mb-4">Katalog Aplikasi Utama</h2>
+                <p class="text-gray-600 max-w-xl mx-auto">Solusi lengkap untuk digitalisasi manajemen sekolah dan administrasi berbasis Spreadsheet.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
                         <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-laptop-code"></i></div>
                         <div>
-                            <h3 class="text-lg font-bold text-gray-950">Sistem Ujian CBT</h3>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Apps Script & Sheets</span>
+                            <h3 class="text-lg font-bold text-gray-950">Aplikasi CBT</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Apps Script</span>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm mb-6">Sistem Computer Based Test responsif dengan timer, acak soal, dan rekap otomatis ke Google Sheets.</p>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Sistem Computer Based Test responsif dengan timer, acak soal otomatis, dan rekap nilai langsung ke Sheets.</p>
                     <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                         <span class="text-xl font-bold text-gray-950">Rp 500.000</span>
-                        <button onclick="addToCart('Sistem Ujian CBT', 500000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">
+                        <button onclick="addToCart('Aplikasi CBT', 500000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
                             <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
                     <div class="flex items-center space-x-4 mb-4">
-                        <div class="w-14 h-14 bg-green-100 text-green-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-users"></i></div>
+                        <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-money-check-dollar"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-950">Pembayaran Sekolah</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Manajemen SPP</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Kelola SPP dan iuran siswa. Rekap otomatis, cetak kwitansi digital, dan pantau tagihan dengan mudah.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                        <span class="text-xl font-bold text-gray-950">Rp 600.000</span>
+                        <button onclick="addToCart('Aplikasi Pembayaran Sekolah', 600000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-book-open-reader"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-950">Aplikasi LMS</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">E-Learning</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Learning Management System untuk berbagi materi, pengumpulan tugas, dan interaksi pembelajaran interaktif.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                        <span class="text-xl font-bold text-gray-950">Rp 750.000</span>
+                        <button onclick="addToCart('Aplikasi LMS', 750000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 bg-amber-100 text-amber-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-envelope-open-text"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-950">Aplikasi Surat Menyurat</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Arsip Digital</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Manajemen surat masuk/keluar, disposisi otomatis, penomoran surat, dan arsip dokumen terpusat.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                        <span class="text-xl font-bold text-gray-950">Rp 450.000</span>
+                        <button onclick="addToCart('Aplikasi Surat Menyurat', 450000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 bg-cyan-100 text-cyan-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-chart-pie"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-950">Dashboard Keuangan</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Analitik</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Visualisasi arus kas (cash flow), laporan laba-rugi, dan analitik keuangan real-time dengan grafik menarik.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                        <span class="text-xl font-bold text-gray-950">Rp 550.000</span>
+                        <button onclick="addToCart('Aplikasi Dashboard Keuangan', 550000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-piggy-bank"></i></div>
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-950">Aplikasi Buku Tabungan</h3>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Pencatatan</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Pencatatan setoran/penarikan tabungan siswa, kalkulasi saldo otomatis, dan cetak riwayat tabungan.</p>
+                    <div class="flex justify-between items-center pt-4 border-t border-gray-100">
+                        <span class="text-xl font-bold text-gray-950">Rp 400.000</span>
+                        <button onclick="addToCart('Aplikasi Buku Tabungan', 400000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
+                            <i class="fa-solid fa-cart-plus"></i> Tambah
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 transform hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <div class="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-users-viewfinder"></i></div>
                         <div>
                             <h3 class="text-lg font-bold text-gray-950">Presensi QR Code</h3>
-                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Apps Script & Sheets</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded-md">Absensi Pintar</span>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm mb-6">Sistem absensi siswa/karyawan menggunakan pemindai barcode/QR yang terhubung langsung ke database.</p>
+                    <p class="text-gray-600 text-sm mb-6 h-16">Sistem absensi pemindai barcode/QR yang terhubung langsung ke database rekapitulasi kehadiran.</p>
                     <div class="flex justify-between items-center pt-4 border-t border-gray-100">
                         <span class="text-xl font-bold text-gray-950">Rp 350.000</span>
-                        <button onclick="addToCart('Presensi QR Code', 350000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold">
+                        <button onclick="addToCart('Presensi QR Code', 350000)" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-sm font-semibold flex items-center gap-2">
                             <i class="fa-solid fa-cart-plus"></i> Tambah
                         </button>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-dashed border-gray-300 bg-gray-50">
+                <div class="bg-gray-50 p-6 rounded-2xl shadow-sm border border-dashed border-gray-300 md:col-span-2 lg:col-span-2">
                     <div class="flex items-center space-x-4 mb-4">
-                        <div class="w-14 h-14 bg-gray-200 text-gray-500 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="w-14 h-14 bg-gray-200 text-gray-600 rounded-xl flex items-center justify-center text-2xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
                         <div>
-                            <h3 class="text-lg font-bold text-gray-950">Aplikasi Custom</h3>
-                            <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-1 rounded-md">Request Khusus</span>
+                            <h3 class="text-lg font-bold text-gray-950">Aplikasi Custom / Lainnya</h3>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded-md font-semibold">Request Khusus</span>
                         </div>
                     </div>
-                    <p class="text-gray-600 text-sm mb-6">Aplikasi yang Anda butuhkan belum tersedia di katalog? Kami bisa membuatkannya khusus untuk Anda.</p>
-                    <div class="pt-4 border-t border-gray-200">
-                        <a href="https://wa.me/6285895283075?text=Halo%20Admin%20Belajar%20Inovasi,%20saya%20ingin%20request%20pembuatan%20aplikasi%20custom%20berbasis%20Apps%20Script..." target="_blank" class="block w-full text-center bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition text-sm font-semibold">
-                            <i class="fa-brands fa-whatsapp text-lg align-middle mr-1"></i> Silakan Hubungi Kami
+                    <p class="text-gray-600 text-sm mb-6">Aplikasi yang Anda butuhkan (seperti yang ada di YouTube kami) tidak tercantum di atas? Atau Anda butuh penyesuaian khusus? Kami siap membuatkannya.</p>
+                    <div class="pt-4 border-t border-gray-200 flex sm:flex-row flex-col gap-3">
+                        <a href="https://youtube.com/@suwanto_pakwanto?si=jSQB2fzfunUz3vEo" target="_blank" class="flex-1 flex justify-center items-center bg-red-600 text-white px-4 py-2.5 rounded-lg hover:bg-red-700 transition text-sm font-semibold gap-2">
+                            <i class="fa-brands fa-youtube text-lg"></i> Cek Portofolio YouTube
+                        </a>
+                        <a href="https://wa.me/6285895283075?text=Halo%20Admin%20Belajar%20Inovasi,%20saya%20tertarik%20dengan%20aplikasi%20yang%20ada%20di%20YouTube%20Bapak%20atau%20ingin%20request%20aplikasi%20custom..." target="_blank" class="flex-1 flex justify-center items-center bg-green-500 text-white px-4 py-2.5 rounded-lg hover:bg-green-600 transition text-sm font-semibold gap-2">
+                            <i class="fa-brands fa-whatsapp text-lg"></i> Konsultasi via WA
                         </a>
                     </div>
                 </div>
@@ -106,64 +211,56 @@
         </div>
     </main>
 
-    <footer class="bg-gray-950 text-gray-400 py-12 px-6 text-center text-sm">
-        <div class="max-w-7xl mx-auto">
-            <p class="text-white font-bold text-xl mb-4">Belajar Inovasi</p>
-            <p class="mb-4">&copy; 2024 Belajar Inovasi. Solusi Cerdas Berbasis Google Workspace.</p>
-            <a href="https://youtube.com/@suwanto_pakwanto?si=jSQB2fzfunUz3vEo" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fa-brands fa-youtube"></i> Kunjungi Channel YouTube Kami</a>
+    <footer class="bg-gray-950 text-gray-400 py-12 px-6 text-center text-sm border-t-4 border-blue-600">
+        <div class="max-w-7xl mx-auto flex flex-col items-center">
+            <img src="https://drive.google.com/uc?export=view&id=1WTjBl1ks0LeoUSRm69woUj1kASRCt_Tv" alt="Logo Footer" class="w-12 h-12 mb-4 rounded-lg grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition duration-300">
+            <p class="text-white font-bold text-xl mb-2">Belajar Inovasi</p>
+            <p class="mb-6">&copy; 2024 Belajar Inovasi. Solusi Cerdas Berbasis Google Workspace.</p>
+            <a href="https://youtube.com/@suwanto_pakwanto?si=jSQB2fzfunUz3vEo" target="_blank" class="inline-flex items-center gap-2 text-gray-400 hover:text-white bg-gray-900 px-4 py-2 rounded-full transition">
+                <i class="fa-brands fa-youtube text-red-500"></i> YouTube Channel
+            </a>
         </div>
     </footer>
 
-    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex justify-end">
-        <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col transform transition-transform translate-x-full" id="cart-panel">
-            <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-60 z-50 hidden flex justify-end transition-opacity">
+        <div class="bg-white w-full max-w-md h-full shadow-2xl flex flex-col transform transition-transform translate-x-full duration-300" id="cart-panel">
+            
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-white">
                 <h2 class="text-xl font-bold text-gray-950">Keranjang Belanja</h2>
-                <button onclick="toggleCart()" class="text-gray-400 hover:text-red-500"><i class="fa-solid fa-xmark text-xl"></i></button>
+                <button onclick="toggleCart()" class="text-gray-400 hover:text-red-500 transition"><i class="fa-solid fa-xmark text-2xl"></i></button>
             </div>
             
-            <div id="cart-items" class="flex-1 overflow-y-auto p-6 flex flex-col gap-4">
-                <p class="text-center text-gray-500 mt-10" id="empty-cart-msg">Keranjang masih kosong.</p>
+            <div id="cart-items" class="flex-1 overflow-y-auto p-6 flex flex-col gap-4 bg-gray-50">
+                <div id="empty-cart-msg" class="text-center text-gray-500 mt-10 flex flex-col items-center">
+                    <i class="fa-solid fa-basket-shopping text-4xl mb-3 text-gray-300"></i>
+                    <p>Keranjang masih kosong.</p>
+                </div>
                 </div>
 
-            <div class="p-6 border-t border-gray-100 bg-gray-50">
+            <div class="p-6 border-t border-gray-200 bg-white">
                 <div class="flex justify-between items-center mb-4">
-                    <span class="font-medium text-gray-600">Total Harga:</span>
+                    <span class="font-medium text-gray-600">Total Pembayaran:</span>
                     <span id="cart-total" class="text-2xl font-bold text-gray-950">Rp 0</span>
                 </div>
-                <button onclick="checkoutWhatsApp()" class="w-full bg-green-500 text-white py-3 rounded-xl font-bold hover:bg-green-600 transition flex justify-center items-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> Lanjutkan Pembelian via WA
+                <button onclick="checkoutWhatsApp()" class="w-full bg-green-500 text-white py-3.5 rounded-xl font-bold hover:bg-green-600 transition flex justify-center items-center gap-2 shadow-lg shadow-green-200">
+                    <i class="fa-brands fa-whatsapp text-xl"></i> Checkout via WhatsApp
                 </button>
             </div>
         </div>
     </div>
 
     <script>
-        // 1. PENGAMANAN HALAMAN (Kunci Inspect Element)
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-        });
+        // 1. PENGAMANAN HALAMAN (Anti-Inspect)
+        document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
         document.onkeydown = function(e) {
-            // Mencegah F12
-            if(e.keyCode == 123) {
-                return false;
-            }
-            // Mencegah Ctrl+Shift+I (Inspect)
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-                return false;
-            }
-            // Mencegah Ctrl+Shift+J (Console)
-            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-                return false;
-            }
-            // Mencegah Ctrl+U (View Source)
-            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-                return false;
-            }
+            if(e.keyCode == 123) return false; 
+            if(e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'J'.charCodeAt(0))) return false;
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false; 
         };
 
         // 2. LOGIKA KERANJANG BELANJA
         let cart = [];
-        const noWaOwner = "6285895283075"; // Nomor WhatsApp Anda
+        const noWaOwner = "6285895283075"; 
 
         function formatRupiah(angka) {
             return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(angka);
@@ -172,9 +269,7 @@
         function addToCart(itemName, itemPrice) {
             cart.push({ name: itemName, price: itemPrice });
             updateCartUI();
-            
-            // Efek visual sementara buka keranjang
-            toggleCart(true);
+            toggleCart(true); 
         }
 
         function removeFromCart(index) {
@@ -189,13 +284,15 @@
             const emptyMsg = document.getElementById('empty-cart-msg');
 
             cartCountElement.innerText = cart.length;
-            cartItemsContainer.innerHTML = '';
+            
+            Array.from(cartItemsContainer.children).forEach(child => {
+                if(child.id !== 'empty-cart-msg') child.remove();
+            });
             
             let total = 0;
 
             if (cart.length === 0) {
-                emptyMsg.style.display = 'block';
-                cartItemsContainer.appendChild(emptyMsg);
+                emptyMsg.style.display = 'flex';
             } else {
                 emptyMsg.style.display = 'none';
                 cart.forEach((item, index) => {
@@ -203,10 +300,12 @@
                     const itemHTML = `
                         <div class="flex justify-between items-center bg-white p-4 rounded-xl border border-gray-100 shadow-sm">
                             <div>
-                                <h4 class="font-medium text-gray-900 text-sm">${item.name}</h4>
+                                <h4 class="font-bold text-gray-900 text-sm">${item.name}</h4>
                                 <p class="text-blue-600 font-bold text-sm">${formatRupiah(item.price)}</p>
                             </div>
-                            <button onclick="removeFromCart(${index})" class="text-red-400 hover:text-red-600 p-2"><i class="fa-solid fa-trash"></i></button>
+                            <button onclick="removeFromCart(${index})" class="text-gray-400 hover:text-red-600 bg-gray-50 hover:bg-red-50 p-2 rounded-lg transition">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
                         </div>
                     `;
                     cartItemsContainer.insertAdjacentHTML('beforeend', itemHTML);
@@ -221,31 +320,30 @@
             
             if (modal.classList.contains('hidden') || forceOpen) {
                 modal.classList.remove('hidden');
-                // Timeout kecil agar transisi slide masuk terlihat
                 setTimeout(() => { panel.classList.remove('translate-x-full'); }, 10);
             } else {
                 panel.classList.add('translate-x-full');
-                setTimeout(() => { modal.classList.add('hidden'); }, 300); // Tunggu animasi selesai
+                setTimeout(() => { modal.classList.add('hidden'); }, 300);
             }
         }
 
         // 3. LOGIKA CHECKOUT WHATSAPP
         function checkoutWhatsApp() {
             if (cart.length === 0) {
-                alert('Keranjang Anda masih kosong. Silakan pilih aplikasi terlebih dahulu.');
+                alert('Keranjang Anda masih kosong. Silakan tambah aplikasi terlebih dahulu.');
                 return;
             }
 
-            let message = "*Halo Belajar Inovasi!* 💡\nSaya tertarik dan ingin melakukan pemesanan untuk aplikasi berikut:\n\n";
+            let message = "*Halo Admin Belajar Inovasi!* 💡\nSaya ingin memesan aplikasi berikut dari katalog:\n\n";
             let total = 0;
 
             cart.forEach((item, index) => {
-                message += `${index + 1}. ${item.name} - ${formatRupiah(item.price)}\n`;
+                message += `*${index + 1}. ${item.name}*\n   ${formatRupiah(item.price)}\n`;
                 total += item.price;
             });
 
-            message += `\n*Total Harga: ${formatRupiah(total)}*\n\n`;
-            message += "Mohon panduan untuk proses pembayaran dan pengiriman source code-nya. Terima kasih!";
+            message += `\n*Total Tagihan: ${formatRupiah(total)}*\n\n`;
+            message += "Mohon panduan untuk proses pembayaran dan pengiriman akses Google Sheets/Apps Script-nya. Terima kasih!";
 
             const encodedMessage = encodeURIComponent(message);
             const waURL = `https://wa.me/${noWaOwner}?text=${encodedMessage}`;
